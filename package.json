@@ -1,7 +1,7 @@
 {
   "name": "pixlr-sdk",
-  "version": "1.0.1",
-  "description": "Pixlr API library",
+  "version": "1.0.2",
+  "description": "Pixlr SDK library",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,10 +10,12 @@
   ],
   "scripts": {
     "start": "ts-node src/index.ts",
-    "test": "jest",
+    "dev": "tsup --watch",
+    "build": "tsup",
     "link": "tsup && npm link",
-    "test:watch": "jest --watch",
-    "build": "tsup"
+    "publish": "npm publish",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
