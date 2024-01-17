@@ -1,6 +1,6 @@
 {
   "name": "pixlr-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pixlr API library",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -31,6 +31,6 @@
     "yarn": "^1.22.21"
   },
   "dependencies": {
-    "jose": "^5.2.0"
+    
   }
 }
