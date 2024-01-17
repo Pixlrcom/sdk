@@ -1,6 +1,6 @@
-import { Application } from "./application/Application";
-import { timeout } from "./helpers/functions";
-import { OpenOptions } from "./types";
+import { Application } from "../application/Application";
+import { timeout } from "../helpers/functions";
+import { OpenOptions } from "../types";
 
 /**
  * A proxy class to control an embeded Editor
