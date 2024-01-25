@@ -1,6 +1,6 @@
 {
   "name": "pixlr-sdk",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Pixlr SDK library",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -13,7 +13,7 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "link": "tsup && npm link",
-    "publish": "tsup && npm publish",
+    "release": "tsup && jest && npm publish",
     "test": "jest",
     "test:watch": "jest --watch"
   },
