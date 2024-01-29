@@ -2,6 +2,10 @@
 
 PixlrSDK is a library that allows you to integrate Pixlr's image editing capabilities directly into your web applications. It provides an easy-to-use API to open and edit images in an embedded Pixlr editor within an iframe.
 
+## Obtaining Access Keys
+
+To obtain API Access keys, you must first register an account at [Pixlr.com](https://pixlr.com). After creating your account, you can generate your API Access keys by visiting [this page](https://pixlr.com/myaccount) and navigating to the Developer section.
+
 ## Features
 
 - Open image files in an embedded Pixlr editor.
