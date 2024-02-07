@@ -19,6 +19,7 @@ export class Editor extends Application {
     options: OpenOptions = {}
   ): Promise<Editor> {
     const baseUrl = options?.baseUrl ?? "https://pixlr.com";
+    const pathname = options?.fullEditor ? "editor/" : "express/";
 
     const ready = new Promise<MessagePort>((resolve, reject) => {
       const handler = (event: MessageEvent) => {
@@ -35,7 +36,7 @@ export class Editor extends Application {
     });
 
     const url = new URL(baseUrl);
-    url.pathname = "editor/";
+    url.pathname =pathname;
     url.searchParams.append("token", token);
 
     target.src = url.toString();
