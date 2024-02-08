@@ -4,7 +4,7 @@ import { OpenOptions } from "../types";
 /**
  * A proxy class to control an embeded Editor
  */
-export class Editor extends Application {
+export class Express extends Application {
   /**
    * Open and connect to an instance of Pixlr editor in the target iframe
    * @param token JWT token to use for API access
@@ -16,8 +16,8 @@ export class Editor extends Application {
     token: string,
     target: HTMLIFrameElement,
     options: OpenOptions = {}
-  ): Promise<Editor> {
-    const port = await Application.connectToIframe('editor/', token, target, options);
-    return new Editor(port);
+  ): Promise<Express> {
+    const port = await Application.connectToIframe('express/', token, target, options);
+    return new Express(port);
   }
 }

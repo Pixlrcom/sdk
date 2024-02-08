@@ -159,9 +159,9 @@ Connects to an instance of the Pixlr editor.
   - `baseUrl`: Optional url for the editor. Defaults to `https://pixlr.com`.
   - `fullEditor`: Optional. By default a [Pixlr Express](https://pixlr.com/express/) version will be used, set this key to true to experiment the full power of [Pixlr Editor](https://pixlr.com/editor/).
 
-### `Editor.open(file: File): AsyncGenerator<File>`
+### `Editor.open(file: File | URL): AsyncGenerator<File>`
 
-Opens an image file in the editor. Returns an async generator that yields updated files.
+Opens an image file or url in the editor. Returns an async generator that yields updated files.
 
 - `file`: The image file to open.
 
