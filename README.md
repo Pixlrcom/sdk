@@ -19,13 +19,13 @@ To obtain API Access keys, you must first register an account at [Pixlr.com](htt
 Install Pixlr SDK via npm:
 
 ```bash
-npm install pixlr-sdk
+npm install @pixlrlte/pixlr-sdk
 ```
 
 Or using yarn:
 
 ```bash
-yarn add pixlr-sdk
+yarn add @pixlrlte/pixlr-sdk
 ```
 
 ## Server side Usage
