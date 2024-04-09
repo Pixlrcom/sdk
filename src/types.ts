@@ -8,13 +8,19 @@ export interface OpenOptions {
   fullEditor?: boolean;
 }
 
+type AccentNames = 'ash' | 'brown' | 'coral' | 'pink' | 'rose' | 'red' | 'plum' | 'maroon' | 'purple' | 'lavender' | 'denim' | 'blue' | 'teal' | 'green' | 'lime' | 'mustard';
+type WorkspaceNames = 'dark' | 'iron' | 'steel' | 'light';
+type ToolNames = 'arrange' | 'crop' | 'cutout' | 'liquify' | 'adjust' | 'effect' | 'filter' | 'ai' | 'retouch' | 'paint' | 'add-text' | 'add-element' | 'frame' | 'marquee' | 'lasso' | 'wand' | 'clone' | 'heal' | 'detail' | 'toning' | 'temper' | 'focus' | 'disperse' | 'pen' | 'fill' | 'draw' | 'shape' | 'eraser' | 'replace' | 'gradient' | 'text' | 'zoom' | 'hand';
+
+
 interface BaseSettings {
   referrer?: string;
   icon?: string;
-  accent?: string;
-  workspace?: string;
+  accent?: AccentNames;
+  workspace?: WorkspaceNames;
   tabLimit?: number;
   blockOpen?: boolean;
+  disabledTools?: ToolNames[]
 }
 
 interface BasePayload {
