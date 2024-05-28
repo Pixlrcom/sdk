@@ -11,11 +11,11 @@ export abstract class Application {
     token: string,
     target: HTMLIFrameElement,
     options: OpenOptions): Promise<MessagePort> {
-    const baseUrl = options?.baseUrl ?? "https://pixlr.com";
+    const baseUrl = new URL(options?.baseUrl ?? "https://pixlr.com");
 
     const ready = new Promise<MessagePort>((resolve, reject) => {
       const handler = (event: MessageEvent) => {
-        if (event.origin !== baseUrl) return;
+        if (event.origin !== baseUrl.origin) return;
         if (event.data?.op !== 'ready') return reject('unexpected message: ready not received');
         if (event.ports.length !== 1) return reject('ready did not send a port');
 
@@ -28,7 +28,7 @@ export abstract class Application {
     });
 
     const url = new URL(baseUrl);
-    url.pathname = path;
+    url.pathname += path;
     url.searchParams.append("token", token);
 
     target.src = url.toString();
