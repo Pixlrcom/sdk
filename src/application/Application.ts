@@ -27,8 +27,13 @@ export abstract class Application {
       window.addEventListener('message', handler);
     });
 
-    const url = new URL(baseUrl);
-    url.pathname += path;
+    const url = new URL(baseUrl.origin);
+    // Do our best to normalize url paths
+    url.pathname = (baseUrl.pathname.split('/')
+                  .concat(path.split('/'))
+                  .filter(n => !!n)
+                  .join('/')) + '/';
+    
     url.searchParams.append("token", token);
 
     target.src = url.toString();
@@ -65,7 +70,7 @@ export abstract class Application {
     const iter = new MessageIterator(port);
 
     for await (const message of iter) {
-      yield message.data as File;
+      yield message.data as File | Array<File>;
     }
   }
 

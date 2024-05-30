@@ -17,7 +17,7 @@ export class Editor extends Application {
     target: HTMLIFrameElement,
     options: OpenOptions = {}
   ): Promise<Editor> {
-    const port = await Application.connectToIframe('editor/', token, target, options);
+    const port = await Application.connectToIframe('/editor/', token, target, options);
     return new Editor(port);
   }
 }

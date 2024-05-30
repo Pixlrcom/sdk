@@ -2,7 +2,7 @@ import { Application } from "../application/Application";
 import { OpenOptions } from "../types";
 
 /**
- * A proxy class to control an embeded Editor
+ * A proxy class to control an embeded Express
  */
 export class Express extends Application {
   /**
@@ -17,7 +17,7 @@ export class Express extends Application {
     target: HTMLIFrameElement,
     options: OpenOptions = {}
   ): Promise<Express> {
-    const port = await Application.connectToIframe('express/', token, target, options);
+    const port = await Application.connectToIframe('/express/', token, target, options);
     return new Express(port);
   }
 }
