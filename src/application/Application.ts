@@ -30,6 +30,7 @@ export abstract class Application {
     const url = new URL(baseUrl.origin);
     // Do our best to normalize url paths
     url.pathname = (baseUrl.pathname.split('/')
+                  .concat(options.language ? [options.language] : [])
                   .concat(path.split('/'))
                   .filter(n => !!n)
                   .join('/')) + '/';
