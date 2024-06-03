@@ -187,7 +187,7 @@ fileInput.addEventListener('change', async (event) => {
             // Connect to the Pixlr editor
             editor = await Editor.connect('your-jwt-token', frame, {
                 baseUrl: "https://pixlr.com", // Optional: Custom base URL for the editor
-                langueage: "jp", // Optional: Language for application
+                language: "jp", // Optional: Language for application
             });
         }
 
