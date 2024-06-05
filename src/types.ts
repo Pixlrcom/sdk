@@ -6,4 +6,7 @@ export type Message =
 export interface OpenOptions {
   baseUrl?: string;
   fullEditor?: boolean;
+  language?: language;
 }
+
+export type language = "us" | "id" | "ml" | "cz" | "dk" | "de" | "es" | "ph" | "fr" | "hr" | "it" | "nl" | "no" | "pl" | "pt" | "br" | "ro" | "rs" | "ru" | "fi" | "se" | "tr" | "vn" | "th" | "gr" | "kr" | "jp" | "cn" | "tw";

@@ -158,6 +158,7 @@ Connects to an instance of the Pixlr editor.
 - `options`: Optional. Open settings (not editor settings).
   - `baseUrl`: Optional url for the editor. Defaults to `https://pixlr.com`.
   - `fullEditor`: Optional. By default a [Pixlr Express](https://pixlr.com/express/) version will be used, set this key to true to experiment the full power of [Pixlr Editor](https://pixlr.com/editor/).
+  - `language`: Optional. By default Editor will be in English. Set this key to the preferred language
 
 ### `Editor.open(file: File | URL): AsyncGenerator<File>`
 
@@ -186,6 +187,7 @@ fileInput.addEventListener('change', async (event) => {
             // Connect to the Pixlr editor
             editor = await Editor.connect('your-jwt-token', frame, {
                 baseUrl: "https://pixlr.com", // Optional: Custom base URL for the editor
+                language: "jp", // Optional: Language for application
             });
         }
 
